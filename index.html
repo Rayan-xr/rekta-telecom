@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REKTA-TELECOM | بيع • إصلاح • تبديل الهواتف</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+}
+
+:root{
+    --primary:#0a0e17;
+    --secondary:#141b29;
+    --accent:#00d4ff;
+    --accent2:#7b61ff;
+    --white:#fff;
+    --light:#f0f4fa;
+    --gray:#8a99b0;
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+    --radius:20px;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--light);
+    color:var(--primary);
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+.container{
+    width:100%;
+    max-width:1280px;
+    margin:auto;
+    padding:0 24px;
+}
+
+section{
+    padding:70px 0;
+}
+
+/* HEADER */
+
+header{
+    background:var(--primary);
+    color:white;
+    padding:14px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:2px solid rgba(0,212,255,.15);
+}
+
+.header-flex{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.logo{
+    font-size:1.9rem;
+    font-weight:900;
+    cursor:pointer;
+    user-select:none;
+    white-space:nowrap;
+}
+
+.logo span{
+    color:var(--accent);
+}
+
+nav{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+nav a{
+    color:#ccd6e6;
+    font-weight:600;
+    padding:6px 14px;
+    border-radius:40px;
+    transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+    background:var(--accent);
+    color:#000;
+}
+
+.nav-contact{
+    background:var(--accent);
+    color:#000!important;
+}
+
+/* HERO */
+
+.hero{
+    min-height:calc(100vh - 80px);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:clamp(2.2rem,6vw,3.8rem);
+    font-weight:900;
+    line-height:1.15;
+}
+
+.hero-text h1 span{
+    color:var(--accent);
+}
+
+.subtitle{
+    font-size:1.4rem;
+    color:var(--accent2);
+    font-weight:700;
+}
+
+.hero-text p{
+    color:var(--gray);
+    font-size:1.1rem;
+    margin:18px 0 30px;
+    max-width:600px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn-primary,
+.btn-outline,
+.btn-dark{
+    padding:11px 28px;
+    border-radius:60px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+    display:inline-block;
+    border:none;
+}
+
+.btn-primary{
+    background:var(--accent);
+    color:#000;
+}
+
+.btn-primary:hover{
+    transform:scale(1.04);
+    box-shadow:0 8px 30px rgba(0,212,255,.35);
+}
+
+.btn-outline{
+    background:transparent;
+    border:2px solid var(--accent);
+    color:var(--accent);
+}
+
+.btn-outline:hover{
+    background:var(--accent);
+    color:#000;
+}
+
+.btn-dark{
+    background:var(--primary);
+    color:white;
+    border:2px solid #2a3346;
+}
+
+.btn-dark:hover{
+    border-color:var(--accent);
+}
+
+.hero-image{
+    flex:1;
+    min-height:350px;
+    background:linear-gradient(145deg,#0b111e,#1c263b);
+    border-radius:60px 20px 60px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 30px 60px rgba(0,0,0,.25);
+}
+
+.hero-image i{
+    font-size:9rem;
+    color:var(--accent);
+    filter:drop-shadow(0 0 40px rgba(0,212,255,.3));
+    animation:phoneFloat 3s ease-in-out infinite;
+}
+
+@keyframes phoneFloat{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-15px)}
+}
+
+/* TITLES */
+
+.section-title{
+    font-size:2.5rem;
+    font-weight:800;
+    margin-bottom:35px;
+}
+
+.section-title:after{
+    content:"";
+    display:block;
+    width:70px;
+    height:5px;
+    background:var(--accent);
+    border-radius:10px;
+    margin-top:6px;
+}
+
+/* FILTER */
+
+.filter-bar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.filter-btn{
+    padding:8px 22px;
+    border-radius:60px;
+    border:2px solid #d0d8e5;
+    background:transparent;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+    background:var(--accent);
+    border-color:var(--accent);
+}
+
+/* GRID */
+
+.grid-4{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    gap:25px;
+}
+
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:var(--radius);
+    padding:20px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+    text-align:center;
+    border:1px solid #eef2f7;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:var(--accent);
+}
+
+.phone-images{
+    width:100%;
+    height:190px;
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    background:#f5f7fb;
+    margin-bottom:10px;
+}
+
+.phone-images img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:none;
+}
+
+.phone-images img.active{
+    display:block;
+}
+
+.image-dots{
+    position:absolute;
+    bottom:6px;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+    gap:5px;
+}
+
+.image-dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#aaa;
+}
+
+.image-dot.active{
+    background:var(--accent);
+}
+
+.phone-placeholder{
+    height:190px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:5rem;
+    color:var(--accent);
+}
+
+.card h4{
+    font-size:1.15rem;
+    margin:8px 0 3px;
+}
+
+.price{
+    color:var(--accent);
+    font-size:1.3rem;
+    font-weight:900;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#999;
+    margin-left:7px;
+    font-size:.9rem;
+}
+
+.discount{
+    display:inline-block;
+    background:#ff4757;
+    color:white;
+    padding:2px 9px;
+    border-radius:20px;
+    font-size:.75rem;
+    font-weight:700;
+}
+
+.status{
+    display:inline-block;
+    padding:2px 15px;
+    border-radius:40px;
+    background:#e8f5e9;
+    color:#2e7d32;
+    font-size:.8rem;
+    font-weight:700;
+}
+
+.status.used{
+    background:#fff3e0;
+    color:#e65100;
+}
+
+.btn-group{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:14px;
+}
+
+.btn-small{
+    border:none;
+    cursor:pointer;
+    padding:7px 17px;
+    border-radius:40px;
+    font-weight:700;
+}
+
+.detail{
+    background:#eef2f7;
+}
+
+.order{
+    background:var(--accent);
+    color:#000;
+}
+
+/* SERVICES */
+
+.service-icon{
+    font-size:3rem;
+    color:var(--accent);
+}
+
+.service-desc{
+    color:var(--gray);
+    font-size:.9rem;
+}
+
+/* SWAP */
+
+.swap-box{
+    background:var(--primary);
+    color:white;
+    border-radius:var(--radius);
+    padding:40px;
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.swap-box>div:first-child{
+    flex:1 1 350px;
+}
+
+.swap-box h2{
+    font-size:2.2rem;
+}
+
+.swap-box h2 span{
+    color:var(--accent);
+}
+
+.swap-box p{
+    color:#b0c0d6;
+}
+
+.swap-form{
+    background:white;
+    color:#000;
+    padding:30px;
+    border-radius:var(--radius);
+    flex:1 1 380px;
+}
+
+.form-input{
+    width:100%;
+    padding:12px 15px;
+    margin-bottom:12px;
+    border:1px solid #dce2ec;
+    border-radius:12px;
+    background:#f8faff;
+}
+
+/* WHY */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:25px;
+}
+
+.why-item{
+    text-align:center;
+    padding:20px;
+}
+
+.why-item i{
+    color:var(--accent);
+    font-size:2.8rem;
+    margin-bottom:10px;
+}
+
+/* TESTIMONIALS */
+
+.testimonial-card{
+    background:white;
+    padding:25px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.stars{
+    color:#ffb800;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:20px;
+}
+
+.contact-item{
+    background:white;
+    padding:24px;
+    text-align:center;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.contact-item i{
+    color:var(--accent);
+    font-size:2.4rem;
+    margin-bottom:10px;
+}
+
+/* ADMIN */
+
+.admin-panel{
+    display:none;
+    background:white;
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    margin-bottom:50px;
+}
+
+.admin-panel.show{
+    display:block;
+}
+
+.admin-panel h2{
+    margin-bottom:20px;
+}
+
+.admin-form{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:12px;
+}
+
+.admin-form input,
+.admin-form select{
+    width:100%;
+    padding:12px;
+    border:1px solid #dce2ec;
+    border-radius:10px;
+}
+
+.admin-full{
+    grid-column:1/-1;
+}
+
+.preview-images{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:10px 0;
+}
+
+.preview-images img{
+    width:90px;
+    height:90px;
+    object-fit:cover;
+    border-radius:10px;
+    border:2px solid #ddd;
+}
+
+.admin-product{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+.admin-product button{
+    border:none;
+    background:#ff4757;
+    color:white;
+    padding:7px 15px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* WHATSAPP */
+
+.whatsapp-float{
+    position:fixed;
+    left:25px;
+    bottom:25px;
+    width:62px;
+    height:62px;
+    border-radius:50%;
+    background:#25d366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2.4rem;
+    z-index:999;
+    box-shadow:0 8px 30px rgba(37,211,102,.4);
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--primary);
+    color:#a0b0c8;
+    padding:30px 0;
+    text-align:center;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .header-flex{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:.8rem;
+        padding:5px 9px;
+    }
+
+    .hero{
+        min-height:auto;
+        padding-top:50px;
+    }
+
+    .hero-image{
+        min-height:250px;
+    }
+
+    .hero-image i{
+        font-size:6rem;
+    }
+
+    section{
+        padding:50px 0;
+    }
+
+    .section-title{
+        font-size:2rem;
+    }
+
+    .container{
+        padding:0 15px;
+    }
+}
+
+@media(max-width:480px){
+
+    .logo{
+        font-size:1.4rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-buttons a{
+        text-align:center;
+    }
+
+    .grid-4{
+        grid-template-columns:1fr;
+    }
+
+    .grid-3{
+        grid-template-columns:1fr;
+    }
+
+    .swap-box{
+        padding:22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<div class="container header-flex">
+
+    <!-- اضغط على الشعار 3 مرات لفتح Admin -->
+    <div class="logo" id="adminLogo">
+        REKTA<span>-TELECOM</span>
+    </div>
+
+    <nav>
+        <a href="#home" class="active">الرئيسية</a>
+        <a href="#phones">الهواتف</a>
+        <a href="#repairs">الإصلاحات</a>
+        <a href="#accessories">الإكسسوارات</a>
+        <a href="#about">من نحن</a>
+        <a href="#contact">اتصل بنا</a>
+    </nav>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+<section id="home">
+<div class="container hero">
+
+<div class="hero-text">
+
+<h1>
+REKTA<span>-TELECOM</span>
+</h1>
+
+<div class="subtitle">
+بيع • إصلاح • تبديل الهواتف
+</div>
+
+<p>
+كل ما تحتاجه لهاتفك في مكان واحد، من بيع الهواتف والإكسسوارات إلى الصيانة والإصلاح والتبديل.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#phones" class="btn-primary">
+تصفح الهواتف
+</a>
+
+<a href="#repairs" class="btn-outline">
+اطلب إصلاح هاتفك
+</a>
+
+<a href="#contact" class="btn-dark">
+تواصل معنا
+</a>
+
+</div>
+</div>
+
+<div class="hero-image">
+<i class="fas fa-mobile-screen-button"></i>
+</div>
+
+</div>
+</section>
+
+
+<!-- PHONES -->
+<section id="phones">
+<div class="container">
+
+<h2 class="section-title">
+الهواتف
+</h2>
+
+<div class="filter-bar">
+
+<button class="filter-btn active" data-filter="all">الكل</button>
+<button class="filter-btn" data-filter="apple">Apple</button>
+<button class="filter-btn" data-filter="samsung">Samsung</button>
+<button class="filter-btn" data-filter="xiaomi">Xiaomi</button>
+<button class="filter-btn" data-filter="oppo">Oppo</button>
+<button class="filter-btn" data-filter="realme">Realme</button>
+
+</div>
+
+<div class="grid-4" id="phoneGrid"></div>
+
+</div>
+</section>
+
+
+<!-- REPAIRS -->
+<section id="repairs">
+<div class="container">
+
+<h2 class="section-title">
+خدمات الإصلاح
+</h2>
+
+<div class="grid-3" id="repairGrid"></div>
+
+</div>
+</section>
+
+
+<!-- SWAP -->
+<section id="swap">
+<div class="container">
+
+<div class="swap-box">
+
+<div>
+
+<h2>
+بدّل هاتفك <span>الآن</span>
+</h2>
+
+<p>
+لديك هاتف قديم؟ استبدله بهاتف آخر مناسب لك مع تقييم حالة جهازك.
+</p>
+
+<br>
+
+<a href="https://wa.me/213555123456" target="_blank" class="btn-primary">
+احصل على تقييم هاتفك
+</a>
+
+</div>
+
+
+<div class="swap-form">
+
+<h3>نموذج التبديل</h3>
+
+<input class="form-input" type="text" placeholder="نوع الهاتف">
+
+<input class="form-input" type="text" placeholder="الموديل">
+
+<input class="form-input" type="text" placeholder="السعة">
+
+<select class="form-input">
+
+<option>حالة الهاتف</option>
+<option>ممتاز</option>
+<option>جيد</option>
+<option>مقبول</option>
+
+</select>
+
+<input class="form-input" type="file" accept="image/*" multiple>
+
+<input class="form-input" type="tel" placeholder="رقم الهاتف">
+
+<button class="btn-primary" style="width:100%;" onclick="sendSwap()">
+إرسال الطلب
+</button>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ACCESSORIES -->
+<section id="accessories">
+<div class="container">
+
+<h2 class="section-title">
+الإكسسوارات
+</h2>
+
+<div class="grid-4" id="accessoryGrid"></div>
+
+</div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+
+<h2 class="section-title">
+لماذا REKTA-TELECOM؟
+</h2>
+
+<div class="why-grid">
+
+<div class="why-item">
+<i class="fas fa-tag"></i>
+<h3>أسعار تنافسية</h3>
+</div>
+
+<div class="why-item">
+<i class="fas fa-tools"></i>
+<h3>فنيون متخصصون</h3>
+</div>
+
+<div class="why-item">
+<i class="fas fa-microchip"></i>
+<h3>قطع غيار عالية الجودة</h3>
+</div>
+
+<div class="why-item">
+<i class="fas fa-bolt"></i>
+<h3>خدمة سريعة</h3>
+</div>
+
+<div class="why-item">
+<i class="fas fa-shield-halved"></i>
+<h3>ضمان على بعض الإصلاحات</h3>
+</div>
+
+<div class="why-item">
+<i class="fas fa-headset"></i>
+<h3>خدمة عملاء ممتازة</h3>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- TESTIMONIALS -->
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+آراء العملاء
+</h2>
+
+<div class="grid-3">
+
+<div class="testimonial-card">
+<div class="stars">★★★★★</div>
+<p>"خدمة ممتازة وسريعة جداً!"</p>
+<strong>أحمد محمد</strong>
+</div>
+
+<div class="testimonial-card">
+<div class="stars">★★★★★</div>
+<p>"أفضل محل هواتف في المدينة."</p>
+<strong>سارة خالد</strong>
+</div>
+
+<div class="testimonial-card">
+<div class="stars">★★★★☆</div>
+<p>"قسم الصيانة ممتاز وقطع أصلية."</p>
+<strong>محمد علي</strong>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+تواصل معنا
+</h2>
+
+<div class="contact-grid">
+
+<div class="contact-item">
+<i class="fas fa-phone"></i>
+<h3>رقم الهاتف</h3>
+<p>+213 555 123 456</p>
+</div>
+
+<div class="contact-item">
+<i class="fab fa-whatsapp" style="color:#25d366"></i>
+<h3>WhatsApp</h3>
+<p>+213 555 123 456</p>
+</div>
+
+<div class="contact-item">
+<i class="fab fa-facebook"></i>
+<h3>Facebook</h3>
+<p>REKTA-TELECOM</p>
+</div>
+
+<div class="contact-item">
+<i class="fab fa-instagram"></i>
+<h3>Instagram</h3>
+<p>@rekta_telecom</p>
+</div>
+
+<div class="contact-item">
+<i class="fas fa-map-marker-alt"></i>
+<h3>العنوان</h3>
+<p>الجزائر</p>
+</div>
+
+<div class="contact-item">
+<i class="fas fa-clock"></i>
+<h3>ساعات العمل</h3>
+<p>السبت - الخميس: 9ص - 10م</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ADMIN -->
+<section class="container">
+
+<div id="adminPanel" class="admin-panel">
+
+<h2>
+🔐 لوحة إدارة REKTA-TELECOM
+</h2>
+
+<p style="color:#777;margin-bottom:20px;">
+يمكنك من هنا إضافة الهواتف وتعديل الأسعار والتخفيضات ورفع حتى 4 صور.
+</p>
+
+
+<h3>إضافة هاتف جديد</h3>
+
+<div class="admin-form">
+
+<input id="phoneName" type="text" placeholder="اسم الهاتف">
+
+<select id="phoneBrand">
+
+<option value="apple">Apple</option>
+<option value="samsung">Samsung</option>
+<option value="xiaomi">Xiaomi</option>
+<option value="oppo">Oppo</option>
+<option value="realme">Realme</option>
+
+</select>
+
+<input id="phoneStorage" type="text" placeholder="السعة مثل 256GB">
+
+<select id="phoneStatus">
+
+<option value="جديد">جديد</option>
+<option value="مستعمل">مستعمل</option>
+
+</select>
+
+<input id="phonePrice" type="number" placeholder="السعر">
+
+<input id="phoneDiscount" type="number" placeholder="التخفيض %">
+
+<div class="admin-full">
+
+<label>
+📷 صور الهاتف - حتى 4 صور
+</label>
+
+<input
+id="phoneImages"
+type="file"
+accept="image/*"
+multiple
+onchange="previewSelectedImages(event)"
+>
+
+<div id="previewImages" class="preview-images"></div>
+
+</div>
+
+<button
+class="btn-primary admin-full"
+onclick="addPhone()">
+➕ إضافة الهاتف
+</button>
+
+</div>
+
+
+<hr style="margin:30px 0;border:none;border-top:1px solid #eee;">
+
+
+<h3>
+الهواتف الموجودة
+</h3>
+
+<div id="adminProducts"></div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="container">
+
+<div class="logo">
+REKTA<span>-TELECOM</span>
+</div>
+
+<p>
+© 2026 جميع الحقوق محفوظة
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+<a
+href="https://wa.me/213555123456"
+target="_blank"
+class="whatsapp-float">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+<script>
+
+/* =========================
+   بيانات الهواتف
+========================= */
+
+let phones = JSON.parse(localStorage.getItem("rektaPhones")) || [
+
+{
+name:"iPhone 15 Pro Max",
+storage:"256GB",
+status:"جديد",
+price:1450,
+discount:0,
+brand:"apple",
+images:[]
+},
+
+{
+name:"Samsung Galaxy S24",
+storage:"512GB",
+status:"جديد",
+price:1200,
+discount:0,
+brand:"samsung",
+images:[]
+},
+
+{
+name:"Xiaomi 14 Ultra",
+storage:"512GB",
+status:"مستعمل",
+price:850,
+discount:0,
+brand:"xiaomi",
+images:[]
+},
+
+{
+name:"Oppo Find X7",
+storage:"256GB",
+status:"جديد",
+price:990,
+discount:0,
+brand:"oppo",
+images:[]
+}
+
+];
+
+
+const repairs = [
+
+{
+name:"تبديل الشاشة",
+desc:"شاشة أصلية عالية الجودة",
+icon:"fa-mobile-screen"
+},
+
+{
+name:"تبديل البطارية",
+desc:"بطارية جديدة بكفاءة عالية",
+icon:"fa-battery-full"
+},
+
+{
+name:"إصلاح منفذ الشحن",
+desc:"فحص وإصلاح منفذ الشحن",
+icon:"fa-plug"
+},
+
+{
+name:"إصلاح الكاميرا",
+desc:"كاميرا خلفية وأمامية",
+icon:"fa-camera"
+},
+
+{
+name:"إصلاح السماعة",
+desc:"سماعة وميكروفون",
+icon:"fa-volume-up"
+},
+
+{
+name:"مشاكل البرمجيات",
+desc:"حل مشاكل النظام",
+icon:"fa-code"
+},
+
+{
+name:"تشخيص الأعطال",
+desc:"فحص كامل للجهاز",
+icon:"fa-stethoscope"
+}
+
+];
+
+
+const accessories = [
+
+{
+name:"كفرات سيليكون",
+icon:"fa-mobile-screen"
+},
+
+{
+name:"شاحن سريع 65W",
+icon:"fa-bolt"
+},
+
+{
+name:"كابل USB-C",
+icon:"fa-plug"
+},
+
+{
+name:"سماعة بلوتوث",
+icon:"fa-headphones"
+},
+
+{
+name:"واقي شاشة",
+icon:"fa-shield"
+},
+
+{
+name:"حامل سيارة",
+icon:"fa-car"
+}
+
+];
+
+
+/* =========================
+   حفظ البيانات
+========================= */
+
+function savePhones(){
+
+localStorage.setItem(
+"rektaPhones",
+JSON.stringify(phones)
+);
+
+}
+
+
+/* =========================
+   حساب السعر
+========================= */
+
+function finalPrice(phone){
+
+if(!phone.discount)
+return phone.price;
+
+return Math.round(
+phone.price - (phone.price * phone.discount / 100)
+);
+
+}
+
+
+/* =========================
+   عرض الهواتف
+========================= */
+
+function renderPhones(filter="all"){
+
+const grid =
+document.getElementById("phoneGrid");
+
+let list =
+filter==="all"
+? phones
+: phones.filter(p=>p.brand===filter);
+
+
+grid.innerHTML=list.map((p,index)=>{
+
+let price=finalPrice(p);
+
+let imageHTML="";
+
+if(p.images && p.images.length){
+
+imageHTML=`
+
+<div class="phone-images">
+
+${p.images.map((img,i)=>`
+
+<img
+src="${img}"
+class="${i===0?"active":""}"
+data-phone="${index}"
+data-image="${i}"
+>
+
+`).join("")}
+
+<div class="image-dots">
+
+${p.images.map((img,i)=>`
+
+<span
+class="image-dot ${i===0?"active":""}"
+onclick="changeImage(${index},${i})">
+</span>
+
+`).join("")}
+
+</div>
+
+</div>
+`;
+
+}else{
+
+imageHTML=`
+
+<div class="phone-placeholder">
+<i class="fas fa-mobile-screen-button"></i>
+</div>
+
+`;
+
+}
+
+
+return `
+
+<div class="card">
+
+${imageHTML}
+
+<h4>${p.name}</h4>
+
+<p>${p.storage}</p>
+
+<span class="status ${p.status==="مستعمل"?"used":""}">
+${p.status}
+</span>
+
+<div style="margin-top:8px;">
+
+${
+p.discount
+?
+`
+<span class="old-price">
+$${p.price}
+</span>
+
+<span class="discount">
+-${p.discount}%
+</span>
+`
+:""
+}
+
+<div class="price">
+$${price}
+</div>
+
+</div>
+
+<div class="btn-group">
+
+<button
+class="btn-small detail"
+onclick="showDetails(${index})">
+التفاصيل
+</button>
+
+<button
+class="btn-small order"
+onclick="orderPhone('${p.name}')">
+اطلب الآن
+</button>
+
+</div>
+
+</div>
+
+`;
+
+}).join("");
+
+}
+
+
+/* =========================
+   تغيير صورة الهاتف
+========================= */
+
+function changeImage(phoneIndex,imageIndex){
+
+const card =
+document.querySelectorAll("#phoneGrid .card")[phoneIndex];
+
+if(!card)return;
+
+const images =
+card.querySelectorAll(".phone-images img");
+
+const dots =
+card.querySelectorAll(".image-dot");
+
+images.forEach((img,i)=>{
+img.classList.toggle(
+"active",
+i===imageIndex
+);
+});
+
+dots.forEach((dot,i)=>{
+dot.classList.toggle(
+"active",
+i===imageIndex
+);
+});
+
+}
+
+
+/* =========================
+   التفاصيل
+========================= */
+
+function showDetails(index){
+
+const p=phones[index];
+
+alert(
+"📱 "+p.name+
+"\nالسعة: "+p.storage+
+"\nالحالة: "+p.status+
+"\nالسعر: $"+finalPrice(p)
+);
+
+}
+
+
+/* =========================
+   الطلب عبر واتساب
+========================= */
+
+function orderPhone(name){
+
+const message=
+"السلام عليكم، أريد طلب هاتف: "+name;
+
+const url=
+"https://wa.me/213555123456?text="+
+encodeURIComponent(message);
+
+window.open(url,"_blank");
+
+}
+
+
+/* =========================
+   الإصلاحات
+========================= */
+
+function renderRepairs(){
+
+document.getElementById("repairGrid").innerHTML=
+
+repairs.map(r=>`
+
+<div class="card">
+
+<div class="service-icon">
+
+<i class="fas ${r.icon}"></i>
+
+</div>
+
+<h4>${r.name}</h4>
+
+<p class="service-desc">
+${r.desc}
+</p>
+
+<button
+class="btn-primary"
+style="margin-top:12px;"
+onclick="orderRepair('${r.name}')">
+
+اطلب الخدمة
+
+</button>
+
+</div>
+
+`).join("");
+
+}
+
+
+function orderRepair(name){
+
+const message=
+"السلام عليكم، أريد طلب خدمة: "+name;
+
+window.open(
+"https://wa.me/213555123456?text="+
+encodeURIComponent(message),
+"_blank"
+);
+
+}
+
+
+/* =========================
+   الإكسسوارات
+========================= */
+
+function renderAccessories(){
+
+document.getElementById("accessoryGrid").innerHTML=
+
+accessories.map(a=>`
+
+<div class="card">
+
+<div class="service-icon">
+<i class="fas ${a.icon}"></i>
+</div>
+
+<h4>${a.name}</h4>
+
+<button
+class="btn-small order"
+style="margin-top:10px;"
+onclick="orderAccessory('${a.name}')">
+
+اطلب الآن
+
+</button>
+
+</div>
+
+`).join("");
+
+}
+
+
+function orderAccessory(name){
+
+const message=
+"السلام عليكم، أريد الاستفسار عن: "+name;
+
+window.open(
+"https://wa.me/213555123456?text="+
+encodeURIComponent(message),
+"_blank"
+);
+
+}
+
+
+/* =========================
+   الفلاتر
+========================= */
+
+document.querySelectorAll(".filter-btn")
+.forEach(btn=>{
+
+btn.addEventListener("click",function(){
+
+document.querySelectorAll(".filter-btn")
+.forEach(b=>b.classList.remove("active"));
+
+this.classList.add("active");
+
+renderPhones(this.dataset.filter);
+
+});
+
+});
+
+
+/* =========================
+   رفع الصور
+========================= */
+
+let selectedImages=[];
+
+
+function previewSelectedImages(event){
+
+selectedImages=[];
+
+const files=
+Array.from(event.target.files).slice(0,4);
+
+const preview=
+document.getElementById("previewImages");
+
+preview.innerHTML="";
+
+
+files.forEach(file=>{
+
+const reader=new FileReader();
+
+reader.onload=function(e){
+
+selectedImages.push(e.target.result);
+
+const img=document.createElement("img");
+
+img.src=e.target.result;
+
+preview.appendChild(img);
+
+};
+
+reader.readAsDataURL(file);
+
+});
+
+if(event.target.files.length>4){
+
+alert("يمكنك اختيار 4 صور فقط.");
+
+}
+
+}
+
+
+/* =========================
+   إضافة هاتف
+========================= */
+
+function addPhone(){
+
+const name=
+document.getElementById("phoneName").value.trim();
+
+const brand=
+document.getElementById("phoneBrand").value;
+
+const storage=
+document.getElementById("phoneStorage").value.trim();
+
+const status=
+document.getElementById("phoneStatus").value;
+
+const price=
+Number(document.getElementById("phonePrice").value);
+
+const discount=
+Number(document.getElementById("phoneDiscount").value)||0;
+
+
+if(!name || !storage || !price){
+
+alert("يرجى إدخال اسم الهاتف والسعة والسعر.");
+
+return;
+
+}
+
+
+if(selectedImages.length>4){
+
+alert("الحد الأقصى 4 صور.");
+
+return;
+
+}
+
+
+phones.push({
+
+name,
+brand,
+storage,
+status,
+price,
+discount,
+images:[...selectedImages]
+
+});
+
+
+savePhones();
+
+renderPhones();
+
+renderAdminProducts();
+
+
+document.getElementById("phoneName").value="";
+document.getElementById("phoneStorage").value="";
+document.getElementById("phonePrice").value="";
+document.getElementById("phoneDiscount").value="";
+document.getElementById("phoneImages").value="";
+document.getElementById("previewImages").innerHTML="";
+
+selectedImages=[];
+
+alert("✅ تم إضافة الهاتف بنجاح.");
+
+}
+
+
+/* =========================
+   إدارة المنتجات
+========================= */
+
+function renderAdminProducts(){
+
+const box=
+document.getElementById("adminProducts");
+
+box.innerHTML=phones.map((p,index)=>`
+
+<div class="admin-product">
+
+<div>
+
+<strong>${p.name}</strong>
+
+<br>
+
+<span>
+السعر: $${p.price}
+${p.discount ? " | تخفيض "+p.discount+"%" : ""}
+</span>
+
+</div>
+
+<div>
+
+<button onclick="editPrice(${index})">
+تعديل السعر
+</button>
+
+<button onclick="editDiscount(${index})">
+تعديل التخفيض
+</button>
+
+<button onclick="deletePhone(${index})">
+حذف
+</button>
+
+</div>
+
+</div>
+
+`).join("");
+
+}
+
+
+function editPrice(index){
+
+const value=
+prompt(
+"أدخل السعر الجديد:",
+phones[index].price
+);
+
+if(value!==null && !isNaN(value)){
+
+phones[index].price=Number(value);
+
+savePhones();
+
+renderPhones();
+
+renderAdminProducts();
+
+}
+
+}
+
+
+function editDiscount(index){
+
+const value=
+prompt(
+"أدخل نسبة التخفيض %:",
+phones[index].discount || 0
+);
+
+if(value!==null && !isNaN(value)){
+
+phones[index].discount=Number(value);
+
+savePhones();
+
+renderPhones();
+
+renderAdminProducts();
+
+}
+
+}
+
+
+function deletePhone(index){
+
+if(confirm("هل تريد حذف هذا الهاتف؟")){
+
+phones.splice(index,1);
+
+savePhones();
+
+renderPhones();
+
+renderAdminProducts();
+
+}
+
+}
+
+
+/* =========================
+   فتح Admin
+   3 ضغطات على الشعار
+========================= */
+
+let logoClicks=0;
+let logoTimer=null;
+
+document
+.getElementById("adminLogo")
+.addEventListener("click",function(){
+
+logoClicks++;
+
+clearTimeout(logoTimer);
+
+logoTimer=setTimeout(function(){
+
+logoClicks=0;
+
+},1000);
+
+if(logoClicks===3){
+
+logoClicks=0;
+
+const password=
+prompt("🔐 أدخل كلمة مرور Admin:");
+
+if(password==="rayan"){
+
+const panel=
+document.getElementById("adminPanel");
+
+panel.classList.add("show");
+
+renderAdminProducts();
+
+panel.scrollIntoView({
+behavior:"smooth"
+});
+
+}else{
+
+alert("❌ كلمة المرور غير صحيحة.");
+
+}
+
+}
+
+});
+
+
+/* =========================
+   نموذج التبديل
+========================= */
+
+function sendSwap(){
+
+alert(
+"تم تجهيز الطلب. يرجى التواصل معنا عبر WhatsApp لإرسال تفاصيل الهاتف والصور."
+);
+
+window.open(
+"https://wa.me/213555123456",
+"_blank"
+);
+
+}
+
+
+/* =========================
+   تشغيل الموقع
+========================= */
+
+renderPhones();
+renderRepairs();
+renderAccessories();
+
+</script>
+
+</body>
+</html>
